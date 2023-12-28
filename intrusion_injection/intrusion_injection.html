@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intrusion Injection PDF Viewer</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: #f0f2f5;
+      padding: 15px;
+      text-align: center;
+      position: relative;
+    }
+
+    .header img {
+      width: 100px;
+      height: auto;
+      margin-right: 15px;
+    }
+
+    .header h1 {
+      margin-bottom: 10px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .header .abstract {
+      display: block;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      font-size: 14px;
+      line-height: 1.5;
+      text-align: justify;
+      width: 800px; /* Width of the PDF viewer */
+      overflow: auto; /* Enable text wrapping */
+      padding: 15px; /* Add some padding for readability */
+      border: solid 1px #ccc;
+    }
+
+    .header .authors {
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+
+    .download-link {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .pdf-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background-color: #fff;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pdf-viewer {
+      width: 800px; /* Width of the PDF viewer */
+      height: 600px;
+      background-color: #fff;
+      border: solid 1px #ccc;
+      padding: 15px;
+    }
+
+    .btn {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pdf-container">
+    <header class="header">
+        <img src="ieee mb blue.png" alt="IEEE Logo">
+      <h1>Intrusion Injection</h1>
+      <p class="authors">Charles F. Gonçalves; Nuno Antunes; Marco Vieira</p>
+      <p class="abstract">
+        In the context of network security, intrusion injection is a technique that involves injecting malicious traffic into a network to evaluate the effectiveness of intrusion detection systems (IDSs). This paper presents a new intrusion injection framework that is based on a machine learning approach. The framework is able to automatically generate realistic intrusion scenarios that are tailored to the specific environment of the IDS being evaluated. The results of the evaluation show that the proposed framework is able to effectively test the performance of IDSs and identify potential weaknesses.
+      </p>
+      
+    </header>
+
+  <iframe id="pdf-viewer" src="dsn23 Intrusion Injection.pdf" width="800" height="600"></iframe>
+</div>
+
+<br/>
+<br/>
+<div class="download-link">
+    <a href="https://ieeexplore.ieee.org/document/10202639" target="_blank" class="btn">Read the full paper</a>
+</div>
+
+<script>
+  // Hide iframe scrollbars
+  const pdfViewer = document.getElementById('pdf-viewer');
+  if (pdfViewer && pdfViewer.contentDocument) {
+    pdfViewer.contentDocument.documentElement.style.overflow = 'hidden';
+  }
+</script>
+</body>
+</html>
